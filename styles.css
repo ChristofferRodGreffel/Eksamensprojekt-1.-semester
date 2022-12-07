@@ -1,0 +1,111 @@
+/* Import of fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Removing padding and margin for whole site */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Changing scroll behavior */
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
+}
+
+/* Changing background-color for whole site */
+body {
+    background-color: #FAA92D;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    margin: auto;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    scroll-snap-align: start;
+    height: 15vh;
+    width: 90%;
+    margin: auto;
+}
+
+/* Changing logo size */
+header img {
+    width: 130px;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+}
+/* Changing color of links and other styling */
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 15pt;
+    font-weight: 400;
+}
+
+/* MAIN CONTENT STARTS HERE */
+
+/* General rules for all sections */
+.section {
+    height: 100vh;
+    scroll-snap-align: start;
+    position: relative;
+}
+
+/* Front page */
+#front-page {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    height: 85vh;
+}
+
+/* Changing can size */
+#front-page img {
+    width: 250px;
+}
+
+/* Text styling */
+#front-page h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 140pt;
+    font-weight: 100;
+}
+/* Using postion relative to move text to correct position */
+#front-page h2 {
+    font-weight: 100;
+    font-size: 23pt;
+    position: relative;
+    bottom: 35px;
+    left: 190px;
+}
+
+/* Circle taking visiter to next section of website */
+.fa-circle-arrow-down {
+    color: white;
+    font-size: 15pt;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+/* Leafs on the left side of the screen */
+#leafs {
+    padding-top: 50px;
+    width: 160px;
+    position:absolute;
+}
