@@ -10,7 +10,7 @@
 /* Changing scroll behavior */
 html {
     scroll-behavior: smooth;
-    scroll-snap-type: mandatory;
+    scroll-snap-type: y proximity;
 }
 
 /* Changing background-color for whole site */
@@ -54,10 +54,12 @@ nav a {
 /* MAIN CONTENT STARTS HERE */
 
 /* General rules for all sections */
-.section {
+section {
     height: 100vh;
     scroll-snap-align: start;
+    scroll-snap-type: mandatory;
     position: relative;
+    margin: auto;
 }
 
 /* Front page */
@@ -68,6 +70,7 @@ nav a {
     justify-content: center;
     gap: 50px;
     height: 85vh;
+    max-width: none;
 }
 
 /* Changing can size */
@@ -108,4 +111,175 @@ nav a {
     padding-top: 50px;
     width: 160px;
     position:absolute;
+}
+
+/* FIRST AND SECOND SECTION - HISTORY */
+
+#section1, #section2 {
+    display: flex;
+    scroll-snap-align: start;
+}
+.history {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 60%;
+}
+.history img {
+    height: 500px;
+}
+.history-text h1 {
+    font-family: 'Lobster', cursive;
+    font-weight: 100;
+    font-size: 100pt;
+    padding-bottom: 10px;
+}
+.history-text p {
+    line-height: 25px;
+    font-weight: 300;
+}
+
+/* THIRD SECTION - SQUASH PÅ ROS */
+#section3 {
+    background-image: url(images/roskilde-bg2.png);
+    background-size: cover;
+    object-fit:none;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+.intro {
+    font-family: 'Lobster', cursive;
+    font-weight: 100;
+    font-size: 70pt;
+}
+
+#section3-content {
+    display: flex;
+    gap: 20px;
+    width: 60%;
+}
+#section3-content h2 {
+    padding-bottom: 30px;
+    font-weight: 700;
+}
+#section3-content p {
+    line-height: 20px;
+    margin-bottom: 50px;
+    font-weight: 400;
+}
+#section3-content a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 30px;
+    background-color: #3B680B;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 15pt;
+} 
+#section3 img {
+    width: 220px;
+}
+
+/* FOURTH SECTION - FACTS */
+#section4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+#section4-content {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    width: 80%;
+}
+#section4-content h2 {
+    font-size: 25pt;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+#section4-content p {
+    max-width: 265px;
+    line-height: 25px;
+}
+
+/* FIFTH SECTION - THE FAMILY */
+
+#section5 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#section5-content {
+    display: flex;
+}
+
+/* Scaling of images */
+#all-products {
+    height: 420px;
+}
+#sig-appelsin {
+    height: 260px;
+}
+#familiebillede {
+    height: 250px;
+    position: relative;
+    bottom: 70px;
+    right: 30px;
+    transform-origin: top center;
+    transform: rotate(-5deg);
+    transition: .2s;
+}
+#familiebillede:hover {
+    transform: rotate(0deg);
+}
+
+/* SIXTH SECTION - VARIANTS */
+
+#section6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+#section6-content {
+    display: flex;
+    gap: 130px;
+    align-items: center;
+}
+#section6-content img {
+    width: 220px;
+    transition: .2s;
+}
+#section6-content img:hover {
+    transform: scale(1.05);
+}
+#section6-content p {
+    font-family: 'Lobster', cursive;
+    font-weight: 100;
+    font-size: 300pt;
+}
+
+/* Scrollbar */
+*::-webkit-scrollbar {
+    width: 7px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #FAA92D;
 }

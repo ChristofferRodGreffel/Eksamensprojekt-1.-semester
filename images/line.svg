@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.78 489.67">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-dasharray: 0 0 20 40;
+        stroke-linecap: round;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #fff;
+        stroke-width: 10px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="Ellipse_1" data-name="Ellipse 1">
+    <circle class="cls-3" cx="16.39" cy="16.39" r="13.5"/>
+    <circle class="cls-2" cx="16.39" cy="16.39" r="11.39"/>
+  </g>
+  <g id="Ellipse_2" data-name="Ellipse 2">
+    <circle class="cls-3" cx="16.39" cy="473.28" r="13.5"/>
+    <circle class="cls-2" cx="16.39" cy="473.28" r="11.39"/>
+  </g>
+  <line id="Line_1" data-name="Line 1" class="cls-1" x1="16.6" y1="47.82" x2="16.6" y2="446.07"/>
+</svg>
