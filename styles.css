@@ -49,11 +49,11 @@ nav a {
     color: white;
     font-size: 15pt;
     font-weight: 400;
-    padding: 7px;
 }
+
 nav a:hover {
-    background-color: #3B680B;
-    border-radius: 15px;
+    border-bottom: 3px solid white;
+    margin-bottom: -3px;
 }
 
 /* BURGERMENU */
@@ -69,7 +69,7 @@ nav a:hover {
     /* Styling text and background */
     text-decoration: none;
     color: white;
-    background-color: #FAA92D;
+    background-color: #F6A11F;
     font-size: 17pt;
 
     /* Positioning the icon at the bottom of the page */
@@ -143,7 +143,6 @@ section {
 }
 .fa-circle-arrow-down:hover {
     transform: scale(1.3);
-    color: #3B680B;
 }
 
 /* Leafs on the left side of the screen */
@@ -337,7 +336,6 @@ section {
 }
 .fa-house:hover {
     transform: scale(1.3);
-    color: #3B680B;
 }
 
 /* Scrollbar */
@@ -356,6 +354,10 @@ section {
 /* BREAKPOINT V. 1100 PX */
 
 @media screen and (max-width: 1100px) {
+    html {
+        scroll-snap-type: none;
+        overflow-x: hidden;
+    }
     section {
         height: 95vh;
     }
@@ -427,16 +429,21 @@ section {
     
     /* SQUASH PÅ ROS */
     #section3 {
-        background-image: none;
+        background-size: cover;
     }
     #section3-content {
+        width: 100%;
+        align-items: left;
+    }
+    #section3-text {
+        padding-left: 50px;
     }
     #section3 img {
         width: 100px;
     }
     #ros-img-small {
         display: block;
-        position: absolute;
+        height: 350px;
         right: 0;
     }
     #ros-img-big {
@@ -447,30 +454,60 @@ section {
     .intro {
         font-size: 50pt;
         text-align: center;
+        width: 90%;
     }
     
     
     /* FAMILY */
+    #section5-content {
+        flex-direction: column-reverse;
+    }
     #sig-appelsin {
         display: none;
     }
     #familiebillede {
-        display: none;
+        width: 250px;
+        top: -43px;
+        left: 60px;
+        transform: rotate(5deg);
+    }
+    #all-products {
+        height: 270px;
     }
 
     /* FUN FACTS */
-    #section4 {
-        width: 100%;
-    }
     #section4-content {
-        
+        gap: 30px;
+    }
+    #section4-content p {
+        line-height: 20px;
+        max-width: none;
     }
     #fact3 {
         display: none;
     }
     
     /* VARIANTS */
+    #section6-content {
+        align-items: flex-start;
+        gap: 40px;
+    }
+    #section6-content img {
+        width: 130px;
+    }
+    #section6-content p {
+        display: none;
+    }
+    .fa-house {
+        display: none;
+    }
+}
 
+/* BREAKPOINT V. 700 PX */
 
-    
+@media screen and (max-width: 700px) {
+    /* FUN FACTS */
+    #section4-content {
+        flex-direction: column;
+    }
 }
