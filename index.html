@@ -8,12 +8,13 @@
     <script src="https://kit.fontawesome.com/e4a889809e.js" crossorigin="anonymous"></script>
     <title>Tuborg Squash</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 </head>
 <body>
     <!-- HEADER -->
     <section>
         <header>
-            <a href=""><img src="images/tuborg-logo-white.svg" alt="tuborg logo"></a>
+            <a href="index.html"><img src="images/tuborg-logo-white.svg" alt="tuborg logo"></a>
             <nav>
                 <a href="#section1">Historien</a>
                 <a href="#section3">Squash på Ros</a>
@@ -23,16 +24,23 @@
             </nav>
         </header>
 
-        <img src="images/leaf.svg" alt="blade" id="leafs">
+        <div id="leafs">
+            <img src="images/leaf.svg" alt="blade">
+        </div>
 
         <div id="front-page">
             <div id="tekst">
                 <h1>Squash</h1>
                 <h2>forfriskende original</h2>
             </div>
-            <img src="images/squashcan.png" alt="squash dåse">
+            <img id="big-can" src="images/squashcan.png" alt="squash dåse">
+            <img id="mobile-can" src="images/squashcan-leaf.png" alt="Squash dåse med blade">
         </div>
 
+        <!-- Burgermenu -->
+        <a href="menu.html" id="burger"><i class="fa-solid fa-bars"></i></a>
+        
+        <!-- Arrow down -->
         <a href="#section1"><i class="fa-solid fa-circle-arrow-down"></i></a>
     </section>
 
@@ -43,13 +51,14 @@
             <div class="history">
                 <div class="history-text">
                     <h1>1936</h1>
+                    <img class="hist-img-small" src="images/old poster.png" alt="gammel squash plakat">
                     <p>1936.... Parkometeret bliver opfundet. Danmark sætter kulderekord i juni Måned. Men vigtigst af alt, så bliver de første dråber Squash tappet d. 5 august 1936 og hældt på flaske. 
 
                         <br><br> Siden da har Tuborg Squash altid været en stor favorit blandt det danske folk. 
                         
                         <br><br> Undervejs er Tuborg Squash blevet understøttet af flere sjove reklamer. Herunder "skvash" reklamen med Finn & Jacob.</p>
                 </div>
-                <img src="images/old poster.png" alt="gammel squash plakat">
+                <img class="hist-img-big" src="images/old poster.png" alt="gammel squash plakat">
             </div>
         </section>
         <!-- Second section -->
@@ -57,6 +66,7 @@
             <div class="history">
                 <div class="history-text">
                     <h1>2022</h1>
+                    <img class="hist-img-small" src="images/tuborg glass.png" alt="ny squash sodavand">
                     <p>Tuborg Squash er stadig at finde på hylderne i de danske butikker. 
     
                         <br><br> Nu om dage findes den både i en udgave med og uden sukker. Nemlig vores Tuborg Squash Light.
@@ -65,7 +75,7 @@
                         
                         <br><br> Men bare rolig... Smagen er og forbliver den samme!</p>
                 </div>
-                <img src="images/tuborg glass.png" alt="ny squash sodavand">
+                <img class="hist-img-big" src="images/tuborg glass.png" alt="ny squash sodavand">
             </div>
         </section>
 
@@ -84,7 +94,8 @@
                         <br><br> Så er du med i konkurrencen.</p>
                         <a href="#">Regler og vilkår</a>
                 </div>
-                <img src="images/squashcan.png" alt="squash dåse">
+                <img id="ros-img-big" src="images/squashcan.png" alt="squash dåse">
+                <img id="ros-img-small" src="images/halfcan.png" alt="halv dåse">
             </div>
         </section>
 
@@ -108,7 +119,7 @@
                         
                        <br><br>I dag er det en folkekær og traditionsrig sodavand som mange danskere stadig nyder at drikke.</p>
                 </div>
-                <div>
+                <div id="fact3">
                     <h2>Squash Light</h2>
                     <p>Tuborg Squash Light udgik fra sodavandssortimentet i en længere årrække. 
 
@@ -137,6 +148,7 @@
                 <p>?</p>
                 <img src="images/squashcanlight.png" alt="Tuborg Squash Light">
             </div>
+            <a href="#front-page"><i class="fa-solid fa-house"></i></a>
         </section>
     </main>
 </body>

@@ -49,6 +49,38 @@ nav a {
     color: white;
     font-size: 15pt;
     font-weight: 400;
+    padding: 7px;
+}
+nav a:hover {
+    background-color: #3B680B;
+    border-radius: 15px;
+}
+
+/* BURGERMENU */
+#burger {
+    display: none;
+}
+.fa-bars {
+    /* Using flexbox to place icon in the middle on the axis */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Styling text and background */
+    text-decoration: none;
+    color: white;
+    background-color: #FAA92D;
+    font-size: 17pt;
+
+    /* Positioning the icon at the bottom of the page */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 15px;
+    position: fixed;
+    z-index: 1;
 }
 
 /* MAIN CONTENT STARTS HERE */
@@ -65,7 +97,6 @@ section {
 /* Front page */
 #front-page {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 50px;
@@ -76,6 +107,10 @@ section {
 /* Changing can size */
 #front-page img {
     width: 250px;
+}
+/* Hiding can with leafs */
+#mobile-can {
+    display: none;
 }
 
 /* Text styling */
@@ -104,6 +139,11 @@ section {
     width: fit-content;
     margin: auto;
     margin-bottom: 20px;
+    transition: .1s;
+}
+.fa-circle-arrow-down:hover {
+    transform: scale(1.3);
+    color: #3B680B;
 }
 
 /* Leafs on the left side of the screen */
@@ -129,6 +169,12 @@ section {
 }
 .history img {
     height: 500px;
+}
+/* Hiding pics for small screen size */
+.hist-img-small {
+    display: none;
+    margin: auto;
+    padding-bottom: 20px;
 }
 .history-text h1 {
     font-family: 'Lobster', cursive;
@@ -186,6 +232,9 @@ section {
 #section3 img {
     width: 220px;
 }
+#ros-img-small {
+    display: none;
+}
 
 /* FOURTH SECTION - FACTS */
 #section4 {
@@ -224,7 +273,7 @@ section {
     display: flex;
 }
 
-/* Scaling of images */
+/* Resizing of images */
 #all-products {
     height: 420px;
 }
@@ -253,11 +302,13 @@ section {
     align-items: center;
     gap: 20px;
 }
+
 #section6-content {
     display: flex;
     gap: 130px;
     align-items: center;
 }
+/* Rezising image */
 #section6-content img {
     width: 220px;
     transition: .2s;
@@ -271,6 +322,24 @@ section {
     font-size: 300pt;
 }
 
+/* Home button */
+.fa-house {
+    color: white;
+    font-size: 15pt;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 20px;
+    transition: .1s;
+}
+.fa-house:hover {
+    transform: scale(1.3);
+    color: #3B680B;
+}
+
 /* Scrollbar */
 *::-webkit-scrollbar {
     width: 7px;
@@ -282,4 +351,126 @@ section {
 
 *::-webkit-scrollbar-thumb {
     background-color: #FAA92D;
+}
+
+/* BREAKPOINT V. 1100 PX */
+
+@media screen and (max-width: 1100px) {
+    section {
+        height: 95vh;
+    }
+    /* Burgermenu */
+    #burger {
+        display: block;
+    }
+    nav {
+        display: none;
+    }
+    .fa-circle-arrow-down {
+        display: none;
+    }
+    header a {
+        margin: auto;
+    }
+
+    /* FRONT PAGE */
+    #front-page {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+    #front-page h1 {
+        font-size: 80pt;
+    }
+    #front-page h2 {
+        font-size: 18pt;
+        bottom: 30px;
+        left: 140px;
+    }
+    #tekst h2 {
+        display: none;
+    }
+    #big-can {
+        display: none;
+    }
+    #mobile-can {
+        display: block;
+    }
+    #front-page img {
+        width: 200px;
+    }
+
+    /* Moving leafs to new position */
+    #leafs {
+        display: none
+    }
+
+    /* HISTORY */
+    .history {
+        flex-direction: column-reverse;
+        width: 90%;
+    }
+    .history img {
+        height: 300px;
+    }
+    .hist-img-small {
+        display: block;
+    }
+    .hist-img-big {
+        display: none;
+    }
+
+    .history-text h1 {
+        text-align: center;
+        font-size: 70pt;
+    }
+    
+    /* SQUASH PÅ ROS */
+    #section3 {
+        background-image: none;
+    }
+    #section3-content {
+    }
+    #section3 img {
+        width: 100px;
+    }
+    #ros-img-small {
+        display: block;
+        position: absolute;
+        right: 0;
+    }
+    #ros-img-big {
+        display: none;
+    }
+
+    /* Changing size of titles on pages from this section and downward */
+    .intro {
+        font-size: 50pt;
+        text-align: center;
+    }
+    
+    
+    /* FAMILY */
+    #sig-appelsin {
+        display: none;
+    }
+    #familiebillede {
+        display: none;
+    }
+
+    /* FUN FACTS */
+    #section4 {
+        width: 100%;
+    }
+    #section4-content {
+        
+    }
+    #fact3 {
+        display: none;
+    }
+    
+    /* VARIANTS */
+
+
+    
 }
