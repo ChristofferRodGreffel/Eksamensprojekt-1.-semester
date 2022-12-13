@@ -41,13 +41,13 @@ header img {
 nav {
     display: flex;
     justify-content: space-between;
-    width: 700px;
+    width: 600px;
 }
 /* Changing color of links and other styling */
 nav a {
     text-decoration: none;
     color: white;
-    font-size: 15pt;
+    font-size: 14pt;
     font-weight: 400;
 }
 
@@ -59,28 +59,35 @@ nav a:hover {
 /* BURGERMENU */
 #burger {
     display: none;
-}
-.fa-bars {
-    /* Using flexbox to place icon in the middle on the axis */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    /* Styling text and background */
-    text-decoration: none;
-    color: white;
-    background-color: #F6A11F;
-    font-size: 17pt;
-
     /* Positioning the icon at the bottom of the page */
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
-    padding: 15px;
     position: fixed;
     z-index: 1;
+    padding: 0;
+    margin: 0;
+    background-color: #F6A11F;
+}
+#burger a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+#house-menu, .fa-bars {
+    /* Using flexbox to place icon in the middle on the axis */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Styling text and background */
+    color: white;
+    font-size: 15pt;
+    padding: 15px 5px;
 }
 
 /* MAIN CONTENT STARTS HERE */
@@ -156,7 +163,6 @@ section {
 
 #section1, #section2 {
     display: flex;
-    scroll-snap-align: start;
 }
 .history {
     display: flex;
@@ -184,6 +190,7 @@ section {
 .history-text p {
     line-height: 25px;
     font-weight: 300;
+    max-width: 700px;
 }
 
 /* THIRD SECTION - SQUASH PÅ ROS */
@@ -207,6 +214,7 @@ section {
 
 #section3-content {
     display: flex;
+    justify-content: center;
     gap: 20px;
     width: 60%;
 }
@@ -218,6 +226,7 @@ section {
     line-height: 20px;
     margin-bottom: 50px;
     font-weight: 400;
+    max-width: 700px;
 }
 #section3-content a {
     text-decoration: none;
@@ -227,7 +236,7 @@ section {
     border-radius: 50px;
     font-weight: 600;
     font-size: 15pt;
-} 
+}
 #section3 img {
     width: 220px;
 }
@@ -299,13 +308,22 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
 }
 
 #section6-content {
     display: flex;
     gap: 130px;
     align-items: center;
+}
+.sec6-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.sec6-flex h2 {
+    padding-top: 10px;
+    font-weight: 300;
 }
 /* Rezising image */
 #section6-content img {
@@ -322,7 +340,7 @@ section {
 }
 
 /* Home button */
-.fa-house {
+#house-bottom {
     color: white;
     font-size: 15pt;
     position: absolute;
@@ -334,7 +352,7 @@ section {
     margin-bottom: 20px;
     transition: .1s;
 }
-.fa-house:hover {
+#house-bottom:hover {
     transform: scale(1.3);
 }
 
@@ -351,19 +369,82 @@ section {
     background-color: #FAA92D;
 }
 
+/* SUBPAGE SQUASH VARIANTS */
+
+/* Setting section height and aligning content-wrap in center of viewport */
+.squashinfo {
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Applying styles til the content container */
+.content-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+/* Changing image size */
+#can-big {
+    width: 250px;
+}
+#can-mobile {
+    display: none;
+}
+
+/* Text styling */
+.content-text {
+    max-width: 1400px;
+}
+
+.content-text h1 {
+    font-family: 'Lobster', cursive;
+    font-weight: 100;
+    font-size: 80pt;
+}
+.content-text p {
+    padding-top: 20px;
+    line-height: 25px;
+    max-width: 650px;
+}
+
+#lighth1 {
+    font-size: 60pt;
+}
+
+/* List styling */
+.content-lists {
+    display: flex;
+    gap: 120px;
+    padding-top: 30px;
+}
+.content-lists ul {
+    list-style: none;
+    line-height: 35px;
+}
+.content-lists li {
+    font-size: 13pt;
+}
+
 /* BREAKPOINT V. 1100 PX */
 
 @media screen and (max-width: 1100px) {
     html {
-        scroll-snap-type: none;
+        /* scroll-snap-type: none; */
         overflow-x: hidden;
+        scroll-behavior: unset;
+        scroll-snap-type: none;
     }
     section {
-        height: 95vh;
+        height: 105vh;
+        scroll-snap-align: unset;
     }
     /* Burgermenu */
     #burger {
-        display: block;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
     }
     nav {
         display: none;
@@ -426,7 +507,17 @@ section {
         text-align: center;
         font-size: 70pt;
     }
-    
+
+    #hr {
+        display: block;
+        position: absolute;
+        border-bottom: 10px dashed white;
+        margin: 0;
+        width: 33%;
+        bottom: 620px;
+        left: 0;
+    }
+
     /* SQUASH PÅ ROS */
     #section3 {
         background-size: cover;
@@ -436,7 +527,7 @@ section {
         align-items: left;
     }
     #section3-text {
-        padding-left: 50px;
+        padding-left: 30px;
     }
     #section3 img {
         width: 100px;
@@ -452,12 +543,12 @@ section {
 
     /* Changing size of titles on pages from this section and downward */
     .intro {
-        font-size: 50pt;
+        font-size: 45pt;
         text-align: center;
         width: 90%;
     }
-    
-    
+
+
     /* FAMILY */
     #section5-content {
         flex-direction: column-reverse;
@@ -476,23 +567,34 @@ section {
     }
 
     /* FUN FACTS */
+    #section4 {
+        height: 150vh;
+    }
     #section4-content {
-        gap: 30px;
+        gap: 50px;
+    }
+    #section4-content h2 {
+        font-size: 15pt;
     }
     #section4-content p {
         line-height: 20px;
         max-width: none;
     }
-    #fact3 {
-        display: none;
-    }
-    
+
     /* VARIANTS */
     #section6-content {
         align-items: flex-start;
-        gap: 40px;
+        gap: 60px;
+    }
+    .sec6-flex {
+        width: 70%;
+    }
+    .sec6-flex h2 {
+        font-size: 14pt;
+        width: 80%;
     }
     #section6-content img {
+        padding-top: 50px;
         width: 130px;
     }
     #section6-content p {
@@ -509,5 +611,120 @@ section {
     /* FUN FACTS */
     #section4-content {
         flex-direction: column;
+    }
+}
+
+/* BREAKPOINT V. 1700 PX */
+
+@media screen and (min-width: 1700px) {
+    /* NAV */
+    nav {
+        width: 750px;
+    }
+    nav a {
+        font-size: 15pt;
+    }
+
+
+
+    /* FRONT PAGE */
+
+    /* Changing can size */
+    #front-page img {
+        width: 270px;
+    }
+
+    /* Changing text size */
+    #front-page h1 {
+        font-size: 160pt;
+    }
+    /* Changing text size and moving to correct position */
+    #front-page h2 {
+        font-size: 30pt;
+        bottom: 50px;
+        left: 210px;
+    }
+
+    /* HISTORY SECTION */
+
+    /* Changing image size */
+    .history img {
+        height: 600px;
+    }
+
+    /* Changing text size */
+    .history-text h1 {
+        font-size: 135pt;
+    }
+
+    /* Changing text size and line height */
+    .history-text p {
+        font-size: 14pt;
+        line-height: 30px;
+    }
+
+    /* SQUAS PÅ ROS SECTION */
+
+    #section3 {
+        gap: 80px;
+    }
+    .intro {
+        font-size: 80pt;
+    }
+
+    #section3-content {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        width: 60%;
+    }
+    #section3-content h2 {
+        font-size: 25pt;
+    }
+    #section3-content p {
+        font-size: 14pt;
+        line-height: 30px;
+    }
+    #section3 img {
+        width: 270px;
+    }
+
+    /* FUN FACT SECTION */
+
+    #section4 {
+        gap: 40px;
+    }
+    #section4-content h2 {
+        font-size: 30pt;
+    }
+    #section4-content p {
+        max-width: 300px;
+        line-height: 30px;
+    }
+
+    /* FAMILY SECTION */
+
+    #section5 {
+        gap: 50px;
+    }
+
+    /* Resizing images */
+    #all-products {
+        height: 450px;
+    }
+    #sig-appelsin {
+        height: 260px;
+    }
+    #familiebillede {
+        height: 250px;
+        position: relative;
+        bottom: 70px;
+        right: 30px;
+        transform-origin: top center;
+        transform: rotate(-5deg);
+        transition: .2s;
+    }
+    #familiebillede:hover {
+        transform: rotate(0deg);
     }
 }
