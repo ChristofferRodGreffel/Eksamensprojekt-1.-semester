@@ -18,7 +18,7 @@
         }
 
         body {
-            height: 100%;
+            height: auto;
             background-color: #FAA92D;
             overflow: scroll;
         }
@@ -48,6 +48,7 @@
 
         nav {
             margin-top: 50px;
+            margin-bottom: 50px;
             display: flex;
             gap: 30px;
             flex-direction: column;
@@ -82,7 +83,7 @@
             animation-delay: .3s;
             animation-fill-mode: backwards;
         }
-        nav a:nth-child(5) {
+        .drop-link {
             animation: slidein .6s ease-in-out 1;
             animation-delay: .4s;
             animation-fill-mode: backwards;
@@ -94,7 +95,7 @@
         }
 
         .fa-circle-xmark {
-            position: absolute;
+            position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
@@ -108,6 +109,40 @@
             animation-delay: .5s;
             animation-fill-mode: backwards;
         }
+
+        /* DROPDOWN OVERWRITE */
+
+        .drop-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            border: none;
+            text-decoration: none;
+            padding: 12px;
+            width: 100%;
+            background-color: #F6A11F;
+
+            font-size: 6vw;
+            font-weight: 400;
+            color: white;
+            font-family: 'Raleway', sans-serif;
+        }
+        .dropdown-content {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            display: none;
+        }
+        .dropdown-content a {
+            background-color: #f09a18;
+            font-size: 5vw;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: flex;
+            flex-direction: column;
+        }
     </style>
 </head>
 <body>
@@ -120,7 +155,14 @@
         <a href="index.html#section3">Squash på Ros</a>
         <a href="index.html#section4">Fun Facts</a>
         <a href="index.html#section5">Familien</a>
-        <a href="index.html#section6">Varianter</a>
+        <div class="dropdown">
+            <button class="drop-link">Varianter <i class="fa-solid fa-angle-down"></i></button>
+            <div class="dropdown-content">
+                <a href="index.html#section6">Overblik</a>
+                <a href="squashregular.html">Tuborg Squash</a>
+                <a href="squashlight.html">Tuborg Squash Light</a>
+            </div>
+        </div>
     </nav>
 
     <div id="bracket-bottom">

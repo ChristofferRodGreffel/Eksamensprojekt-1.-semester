@@ -12,16 +12,22 @@
 </head>
 <body>
     <!-- HEADER -->
-        <header>
-            <a href="index.html"><img src="images/tuborg-logo-white.svg" alt="tuborg logo"></a>
-            <nav>
-                <a href="index.html#section1">Historien</a>
-                <a href="index.html#section3">Squash på Ros</a>
-                <a href="index.html#section4">Fun Facts</a>
-                <a href="index.html#section5">Familien</a>
-                <a href="index.html#section6">Varianter</a>
-            </nav>
-        </header>
+    <header>
+        <a href="index.html"><img src="images/tuborg-logo-white.svg" alt="tuborg logo"></a>
+        <nav>
+            <a href="index.html#section1">Historien</a>
+            <a href="index.html#section3">Squash på Ros</a>
+            <a href="index.html#section4">Fun Facts</a>
+            <a href="index.html#section5">Familien</a>
+            <div class="dropdown">
+                <a class="drop-link" href="index.html#section6">Varianter <i class="fa-solid fa-angle-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="squashregular.html">Tuborg Squash</a>
+                    <a href="squashlight.html">Tuborg Squash Light</a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <!-- Burgermenu -->
     <div id="burger">
@@ -34,10 +40,11 @@
         <section class="squashinfo">
             <div class="content-wrap">
                 <div>
-                    <img src="images/squashcanlight.png" alt="Squash Light Sodavand" id="can-big">
+                    <img src="images/squashcanlight.png" alt="Squash light sodavand" class="can-big">
                 </div>
                 <div class="content-text">
                     <h1 id="lighth1">Tuborg Squash Light</h1>
+                    <img src="images/squashcanlight.png" alt="Squash light sodavand" class="can-mobile">
                     <p>Den klassiske Tuborg Squash, men uden sukker. Derfor kan du nu nyde den naturlige smag af friske appelsiner uden at bekymre dig om kalorierne.
                         Den dejlige smag af Tuborg Squash er bibeholdt, men kalorierne er nærmest ikke til at bemærke.
                     </p>

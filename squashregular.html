@@ -12,16 +12,22 @@
 </head>
 <body>
     <!-- HEADER -->
-        <header>
-            <a href="index.html"><img src="images/tuborg-logo-white.svg" alt="tuborg logo"></a>
-            <nav>
-                <a href="index.html#section1">Historien</a>
-                <a href="index.html#section3">Squash på Ros</a>
-                <a href="index.html#section4">Fun Facts</a>
-                <a href="index.html#section5">Familien</a>
-                <a href="index.html#section6">Varianter</a>
-            </nav>
-        </header>
+    <header>
+        <a href="index.html"><img src="images/tuborg-logo-white.svg" alt="tuborg logo"></a>
+        <nav>
+            <a href="index.html#section1">Historien</a>
+            <a href="index.html#section3">Squash på Ros</a>
+            <a href="index.html#section4">Fun Facts</a>
+            <a href="index.html#section5">Familien</a>
+            <div class="dropdown">
+                <a class="drop-link" href="index.html#section6">Varianter <i class="fa-solid fa-angle-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="squashregular.html">Tuborg Squash</a>
+                    <a href="squashlight.html">Tuborg Squash Light</a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <!-- Burgermenu -->
     <div id="burger">
@@ -33,10 +39,10 @@
     <main>
         <section class="squashinfo">
             <div class="content-wrap">
-                <img src="images/squashcan.png" alt="Squash sodavand" id="can-big">
+                <img src="images/squashcan.png" alt="Squash sodavand" class="can-big">
                 <div class="content-text">
                     <h1>Tuborg Squash</h1>
-                    <img src="images/squashcan.png" alt="Squash sodavand" id="can-mobile">
+                    <img src="images/squashcan.png" alt="Squash sodavand" class="can-mobile">
                     <p>En forfriskende appelsinsodavand med den klassiske smag af appelsiner og kvalitet! Drik den med dine venner din familier 
                         og nyd den som den er eller bland den op med vodka og nyd en vodka squash.</p>
                     <div class="content-lists">

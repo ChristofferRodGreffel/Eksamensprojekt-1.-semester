@@ -56,6 +56,45 @@ nav a:hover {
     margin-bottom: -3px;
 }
 
+/* DROPDOWN */
+
+/* Dropdown link styling */
+.drop-link {
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Styling and placing content box */
+.dropdown-content {
+    background-color: #FAA92D;
+    display: none;
+    position: absolute;
+    right: 0;
+    min-width: 150px;
+    margin-top: 3px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.075);
+    z-index: 1;
+}
+
+/* Link styling */
+.dropdown-content a {
+    text-align: left;
+    font-size: 12pt;
+    padding: 20px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
 /* BURGERMENU */
 #burger {
     display: none;
@@ -386,10 +425,10 @@ section {
     gap: 50px;
 }
 /* Changing image size */
-#can-big {
+.can-big {
     width: 250px;
 }
-#can-mobile {
+.can-mobile {
     display: none;
 }
 
@@ -603,6 +642,49 @@ section {
     .fa-house {
         display: none;
     }
+
+    /* VARIANTS SUBPAGES */
+
+    /* Setting new height and width */
+    .squashinfo {
+        height: auto;
+        width: 90%;
+    }
+    
+    /* Changing flex direction */
+    .content-wrap {
+        flex-direction: column;
+    }
+
+    /* Hiding big screen image and showing other one */
+    .can-big {
+        display: none;
+    }
+    .can-mobile {
+        display: block;
+        width: 200px;
+        margin: auto;
+        padding-top: 50px;
+    }
+
+    /* Text styling */
+    .content-text h1, #lighth1 {
+        font-size: 40pt;
+        text-align: center;
+    }
+    .content-text p {
+        text-align: center;
+    }
+
+    /* Changing list flex direction */
+    .content-lists {
+        flex-direction: column;
+        gap: 0;
+        padding-bottom: 100px;
+    }
+    .content-lists li {
+        font-size: 12pt;
+    }
 }
 
 /* BREAKPOINT V. 700 PX */
@@ -624,8 +706,6 @@ section {
     nav a {
         font-size: 15pt;
     }
-
-
 
     /* FRONT PAGE */
 
@@ -726,5 +806,25 @@ section {
     }
     #familiebillede:hover {
         transform: rotate(0deg);
+    }
+
+    /* VARIANTS SUBPAGES */
+
+    .can-big {
+        width: 300px;
+    }
+
+    /* Text styling */
+    .content-text h1 {
+        font-size: 70pt;
+    }
+    .content-text p {
+        font-size: 14pt;
+    }
+
+    /* Changing list flex direction */
+    .content-lists li {
+        font-size: 14pt;
+        line-height: 35pt;
     }
 }
