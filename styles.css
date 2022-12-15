@@ -399,11 +399,9 @@ section {
 *::-webkit-scrollbar {
     width: 7px;
 }
-
 *::-webkit-scrollbar-track {
     background: #ffffff;
 }
-
 *::-webkit-scrollbar-thumb {
     background-color: #FAA92D;
 }
@@ -547,16 +545,6 @@ section {
         font-size: 70pt;
     }
 
-    #hr {
-        display: block;
-        position: absolute;
-        border-bottom: 10px dashed white;
-        margin: 0;
-        width: 33%;
-        bottom: 620px;
-        left: 0;
-    }
-
     /* SQUASH PÅ ROS */
     #section3 {
         background-size: cover;
@@ -670,9 +658,6 @@ section {
     /* Text styling */
     .content-text h1, #lighth1 {
         font-size: 40pt;
-        text-align: center;
-    }
-    .content-text p {
         text-align: center;
     }
 
